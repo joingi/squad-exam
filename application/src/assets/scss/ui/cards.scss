@@ -1,0 +1,174 @@
+.activity-card {
+  max-height: fit-content;
+  height: fit-content;
+  min-height: fit-content;
+
+  .overlay {
+    z-index: 0 !important;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(240, 243, 189, 0.5);
+    top: 0;
+    left: 0;
+
+    mix-blend-mode: soft-light;
+  }
+  position: relative;
+  background: #fff;
+  text-decoration: none;
+  color: #444;
+  min-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+  max-width: 100%;
+  max-width: 260px;
+  transform: translateY(0px);
+  transition: all .3s ease-in-out 0s;
+
+  &:hover {
+    transform: translateY(-6px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .activity-thumb {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    height: 173px;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  article {
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+    align-items: flex-end;
+    background: white;
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  p {
+    flex: 1;
+  }
+
+  .trainer-img {
+    width: 40px;
+    height: 40px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+  }
+
+  .price-tag {
+    z-index: 1;
+    position: absolute;
+    background-image: linear-gradient(-180deg, #05e3ca 0%, #02c39a 100%);
+    color: $mainWhite;
+    right: -8px;
+    top: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    span {
+      padding: 8px 10px 8px 15px;
+      font-size: 18px;
+    }
+  }
+
+  .card-title {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    padding: 8px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    color: $mainWhite;
+    span {
+      font-family: $fontBold;
+      font-size: 20px;
+    }
+  }
+
+  .activity-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: fit-content;
+    width: 100%;
+
+    .date {
+      font-size: 16px;
+    }
+    .location {
+      padding-top: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: $fontSemibold;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .card-title {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 0;
+      bottom: 15px;
+      padding: 8px 20px;
+      font-size: 18px;
+      color: $mainWhite;
+      span {
+        font-size: 18px;
+      }
+    }
+    .activity-thumb {
+      // height: 140px;
+    }
+    .trainer-img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .activity-thumb {
+      height: 140px;
+    }
+    .activity-card-info {
+      .location {
+        font-size: 16px;
+      }
+    }
+    .card-title {
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
+.container-cards {
+  @media screen and (max-width: 750px) {
+    .wrap {
+      padding: 0px;
+    }
+  }
+}

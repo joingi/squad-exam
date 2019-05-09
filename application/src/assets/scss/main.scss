@@ -1,0 +1,68 @@
+@import "base/normalize";
+@import "base/vars";
+@import "ui/forms";
+@import "ui/cards";
+@import "ui/buttons";
+@import "ui/event";
+@import "ui/dropdownFilter";
+@import "ui/imageUpload";
+
+@import "ui/error-form";
+@import "base/base";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 !important;
+}
+#app {
+  margin: 0;
+}
+.full-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.container {
+  position: relative;
+  max-width: 917px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 38px;
+}
+
+button {
+  border: 0;
+}
+
+// animation event
+.fadeEvent-enter-active,
+.fadeEvent-leave-active {
+  transition: opacity 1s;
+}
+
+.fadeEvent-enter,
+.fadeEvent-leave-to {
+  opacity: 0;
+}
+
+.location {
+  span {
+    &:nth-child(3) {
+      padding-top: 15px;
+    }
+  }
+}
+
+.container-cards {
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 20px;
+  }
+}

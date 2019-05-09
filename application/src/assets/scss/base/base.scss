@@ -1,0 +1,56 @@
+// @font-face {
+//   font-family: "Proxima";
+//   src: url("~assets/fonts/Mark-Simonson-Proxima-Nova-Regular.otf?v=4.4.0");
+// }
+// @font-face {
+//   font-family: "Proxima-bold";
+//   src: url("~assets/fonts/Mark Simonson - Proxima Nova Bold.otf?v=4.4.0");
+// }
+// @font-face {
+//   font-family: "Proxima-light";
+//   src: url("~assets/fonts/Mark Simonson - Proxima Nova Light.otf?v=4.4.0");
+// }
+// @font-face {
+//   font-family: "Proxima-semibold";
+//   src: url("~assets/fonts/Mark Simonson - Proxima Nova Semibold.otf?v=4.4.0");
+// }
+// @font-face {
+//   font-family: "Proxima-thin";
+//   src: url("~assets/fonts/Mark Simonson - Proxima Nova Thin.otf?v=4.4.0");
+// }
+
+body {
+  font-family: $mainFont;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.list-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-gap: 38px;
+  grid-template-rows: auto;
+  grid-row-gap: 30px;
+
+  @media screen and (max-width: 900px) {
+    grid-gap: 20px;
+    grid-row-gap: 20px;
+    transition: all 0.2ms ease-in;
+  }
+  @media screen and (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 530px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// Underline under filters on list page
+.list-page-underline {
+  width: 100%;
+  height: 1px;
+  background-color: $mainGrey;
+}
